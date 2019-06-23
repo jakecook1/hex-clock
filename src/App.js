@@ -2,7 +2,6 @@ import React from 'react';
 import Moment from 'moment';
 import { Helmet } from "react-helmet";
 import { Container } from 'react-bootstrap';
-import './App.css';
 
 class App extends React.Component {
     constructor() {

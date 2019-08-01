@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 
-import { TestValue } from 'constants/valueTypes';
+import { TestValue } from '../../constants/valueTypes';
 
 const TestView = props => {
     return (

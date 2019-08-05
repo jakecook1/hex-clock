@@ -1,16 +1,17 @@
 import React from 'react';
-import { Container, ButtonGroup, Button } from 'react-bootstrap';
+import { Container, ButtonGroup } from 'react-bootstrap';
 
 import { hexToLuma } from '../../helpers/StringExtensions';
+import ButtonControl from 'components/controls/ButtonControl';
 
 const StrobeButtonsView = props => {
-    const { onStrobeClick, hexTime } = props;
+    const { hexTime } = props;
     return (
         <Container className="text-monospace text-center mt-3">
             <p style={{ color: hexToLuma(hexTime) }}>Strobe</p>
             <ButtonGroup>
-                <Button onClick={onStrobeClick} value="1" color="primary">On</Button>
-                <Button onClick={onStrobeClick} value="0" color="primary">Off</Button>
+                <ButtonControl {...props} text={"On"} value={"1"} />
+                <ButtonControl {...props} text={"Off"} value={"0"} />
             </ButtonGroup>
         </Container>
     );

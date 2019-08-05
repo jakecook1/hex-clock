@@ -50,7 +50,7 @@ class HexClock extends Component {
     render() {
         let { hexTime, time, strobe } = this.state;
         hexTime = strobe
-                    ? hexTime % 2 == 0
+                    ? hexTime % 2 === 0
                         ? '000000'
                         : 'FFFFFF'
                     : hexTime;
@@ -60,7 +60,7 @@ class HexClock extends Component {
                 <Helmet bodyAttributes={{ style: 'background-color : #' + hexTime }} />
                 <TitleView hexTime={hexTime} />
                 <TimeView hexTime={hexTime} time={time} />
-                <StrobeButtonsView hexTime={hexTime} onStrobeClick={this.onStrobeClick} />
+                <StrobeButtonsView hexTime={hexTime} onStrobeClick={this.onStrobeClick} strobe={strobe} />
             </Fragment>
         );
     }

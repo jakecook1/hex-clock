@@ -1,1 +1,1 @@
-export const TestValue = 'This is a hex clock';
+export const Title = 'This is a hex clock';
